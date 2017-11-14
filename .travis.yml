@@ -13,5 +13,6 @@ install:
   - sudo pip install psutil
 
 script:
+  - ptyhon -c 'print "Hello"'
   - python -c 'import platform; print platform.platform()'
   - python -c 'import psutil; print psutil.virtual_memory()'
