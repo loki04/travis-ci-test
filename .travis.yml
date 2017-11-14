@@ -1,23 +1,16 @@
 language: python
-
 sudo: required
 dist: trusty
-
 install:
-  - sudo apt-get install -y
-      wget
-      python-dev
-      python-pip
-      cmake
-      g++
-  - pip install psutil
-
+- sudo apt-get install -y wget python-dev python-pip cmake g++
+- pip install psutil
 script:
-  - sudo dmidecode
-  - pip install psutil
-  - python start.py
-
+- sudo dmidecode
+- pip install psutil
+- python start.py
 deploy:
-  skip_cleanup: true
-  provider: cloud66  
-  redeployment_hook: https://hooks.cloud66.com/stacks/redeploy/b4b8bc9ffda4396f781798ed0c8f0f61/542baeee3005554fbb6d506744f553ab
+  provider: cloud66
+  redeployment_hook:
+    secure: HnsdXlgx1xDcUEsOqBxCzWOQPg7LNE4zyWy3Gi10zdH9l7y3zJ/+gMUJ2fJN3nDScMf/wer6j3UbYTcjT1DyMX2P5jJDHpIe4s5qwdN/5WWfi9wTf06rlrWpOgcNWE3V6DLW4tb29W2PAtFYiGWLez5b15tjK9E1P2ZSodC//C44+qONmI+MKHHyn5dWHK+5VrzBDRvXUqYWpVc/KthqiGfLmM68UQGfjcITx4qRNzsHGduwfwEllwfdX4jLLrfS44Ph5YHEB36EV3XlVIvQDaSJ5wDmyOl11JwDGN2I/1QJGG13lHJjNtc2wLISxibenw4pwIbkAP//KzUKXWjlh9SJAhLEzabtwnRHBCeK0gBwHZVvstemjJtWtc1L/JnglZTq4IpfpVrb8lCyW9Pc/vwKeo5TYI1HZ1kPdJ3O47qmFUmcgY0/JS9+zXuUnExZnmSgTeXWgcA25KvqILQw+cQTw6jXsbjzDldMzDZGfZiRhuHJfnGiWETHS4mFPnDWUwp/tiFO4djZ9hmYQXvjO2vpoDYiqB4lZfpv33vHy+h/OSHzYIjR3dhWiwZxLWMPgtJ2UXjTMD8AYOtKoIdUXSl0818yKgtA50ZpTDQ471tJv9E4zVTphRtOPUG72MtVdsyYIiHlWU9TidXR7CUh5Gl7KXLKHgjldaGpTogms+0=
+  on:
+    repo: loki04/travis-ci-test
