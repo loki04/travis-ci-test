@@ -1,18 +1,24 @@
 language: python
 
-#sudo: required
+sudo: required
 dist: trusty
 
-#install:
-#  - sudo apt-get install -y
-#      wget
-#      python-dev
-#      python-pip
-#      cmake
-#      g++
-#  - pip install psutil
+install:
+  - sudo apt-get install -y
+      wget
+      python-dev
+      python-pip
+      cmake
+      g++
+  - pip install psutil
 
 script:
-#  - sudo dmidecode
+  - sudo dmidecode
   - pip install psutil
   - python start.py
+
+deploy:
+  skip_cleanup: true
+  provider: cloud66  
+  redeployment_hook: https://hooks.cloud66.com/stacks/redeploy/b4b8bc9ffda4396f781798ed0c8f0f61/542baeee3005554fbb6d506744f553ab
+  on: production
