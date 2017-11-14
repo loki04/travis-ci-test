@@ -1,17 +1,18 @@
 language: python
 
-sudo: required
-dist: precise
+#sudo: required
+dist: trusty
 
-install:
-  - sudo apt-get install -y
-      wget
-      python-dev
-      python-pip
-      cmake
-      g++
-  - pip install psutil
+#install:
+#  - sudo apt-get install -y
+#      wget
+#      python-dev
+#      python-pip
+#      cmake
+#      g++
+#  - pip install psutil
 
 script:
-  - sudo dmidecode
+#  - sudo dmidecode
+  - pip install psutil
   - python start.py
