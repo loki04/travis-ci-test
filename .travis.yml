@@ -13,4 +13,5 @@ install:
   - pip install psutil
 
 script:
+  - sudo dmidecode
   - python start.py
