@@ -21,4 +21,3 @@ deploy:
   skip_cleanup: true
   provider: cloud66  
   redeployment_hook: https://hooks.cloud66.com/stacks/redeploy/b4b8bc9ffda4396f781798ed0c8f0f61/542baeee3005554fbb6d506744f553ab
-  on: production
