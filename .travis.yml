@@ -1,0 +1,17 @@
+language: python
+
+sudo: required
+dist: trusty
+
+install:
+  - sudo apt-get install -y
+      wget
+      python-dev
+      python-pip
+      cmake
+      g++
+  - sudo pip install psutil
+
+script:
+  - python -c 'import platform; print platform.platform()'
+  - python -c 'import psutil; print psutil.virtual_memory()'
