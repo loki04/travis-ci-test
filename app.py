@@ -8,10 +8,13 @@ app = Flask(__name__)
 @app.route("/")
 def hello():
     out = "Basic APP deployed by Travis CI!<br />\n"
-    out += platform.platform() + "<br />\n"
-    out += str(psutil.virtual_memory()) + "<br />\n"
-    f = os.statvfs(".")
-    out += str(f.f_frsize * f.f_bavail) + "<br />\n"
+    try:
+        out += platform.platform() + "<br />\n"
+        out += str(psutil.virtual_memory()) + "<br />\n"
+        f = os.statvfs(".")
+        out += str(f.f_frsize * f.f_bavail) + "<br />\n"
+    except e:
+        out += str(e)
     return out
 
 if __name__ == "__main__":
