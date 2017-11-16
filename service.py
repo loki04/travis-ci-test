@@ -28,6 +28,5 @@ class get_user:
 		    return str(child.attrib)
 
 
-
 if __name__ == "__main__":
     app.run()
