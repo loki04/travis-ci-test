@@ -9,9 +9,9 @@ app = Flask(__name__)
 def hello():
     out = "Basic APP deployed by Travis CI!<br />\n"
     out += platform.platform() + "<br />\n"
-    out += psutil.virtual_memory() + "<br />\n"
+    out += str(psutil.virtual_memory()) + "<br />\n"
     f = os.statvfs(".")
-    out += f.f_frsize * f.f_bavail + "<br />\n"
+    out += str(f.f_frsize * f.f_bavail) + "<br />\n"
     return out
 
 if __name__ == "__main__":
