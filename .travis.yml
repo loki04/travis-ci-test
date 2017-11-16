@@ -12,6 +12,6 @@ deploy:
   provider: heroku
   api_key:
     secure: P2FiIL2Vg/rIcdDPapG02zC94GtCyXm/XWk5j5Q6oI40VPf0NcQS9Hrs4IRvNVhM/e2RaHK0bsWpRaI1IN9oAmCkt7hurUCc+erNuyZRNe/j8UIOCv4x0sO29l+FuZnzapsFoNqCUmba9aUa8fS20P+mB266JYZc04na2u9AB+a7B1mHP0KFhmEitG+9djdg6ddHWSIY/TVVGerz5SnD2BWYH2DO4NZk+nsT+4BsIuCPOYapzfC5/txfmhzmgsC+MBLlut+ryKtbecsKbYaFOAMOi18xojhe5gfrVT7rttA3QeeAzkxY6OKC05q2VK64ZXxsB/G7pBnklD4aliiPk3P+0D5rZjRsQl/+iDcAyB+p5Zxr8wkb2qvHfbcEES0PAtOXzIRWpUL3VMlyr5UdvKNF8kETE6Qlsl9vLX3XPFFeJO+EhHIaSMezTbyvVpITaFgb8wyRBMrkdGBMuZ1ylhqaX51q6pg4t2B0MnoIDJ2M5ool9z+ksJ3HP3zWFAaYRTlEkmAwGrZoilQRlAFodnhDwPnSVpo/bsuJWf8tXzz3bbQQ2Div0uHYN34++j33SlYAWf5eLo/LmY0NR254PGTvXWSyLpnMJTKplWWol30mzKjorISPh8L0m7B3ybWX21q/GJvnrv8NJ0t2Y/4xH0+ZM7u7GCm00cEsxGBW0n8=
-  app: travis-ci-test
+  app: travis-ci-test2
   on:
     repo: loki04/travis-ci-test
