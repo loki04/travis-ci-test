@@ -1,0 +1,23 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}This example web app deployed by Travis-CI on Heroku.{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="https://bootswatch.com/4/cyborg/bootstrap.css">
+{% endblock %}
+
+{% block content %}
+<h1 class="text-danger">Travis-CI VM Report</h1>
+<table class="table table-striped table-hover table-bordered">
+<tr>
+ <th><h3>Platform</h1></th><td><h4>{{platform}}</h2></td>
+</tr>
+<tr>
+ <th><h3>Memory</h1></th><td><h4>{{virtmem}}</h2></td>
+</tr>
+<tr>
+ <th><h3>Free space</h1></th><td><h4>{{freespace}}</h2></td>
+</tr>
+</table>
+{% endblock %}
